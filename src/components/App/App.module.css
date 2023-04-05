@@ -1,0 +1,26 @@
+.App {
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  max-width: 991px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 6px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

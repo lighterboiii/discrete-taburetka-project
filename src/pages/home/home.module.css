@@ -1,0 +1,24 @@
+.green {
+  color: #4bd0a0;
+}
+
+.h2 {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.select {
+  margin: 0 auto;
+  max-width: 220px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
