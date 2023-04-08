@@ -14,9 +14,9 @@ export const App: FC = () => {
   return (
     <div className={st.App}>
           <Routes location={background}>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/contacts' element={<ContactsPage />} />
-            <Route path='/map' element={<AroundPage />} />
+            <Route path='discrete-taburetka-project/' element={<HomePage />} />
+            <Route path='discrete-taburetka-project/contacts' element={<ContactsPage />} />
+            <Route path='discrete-taburetka-project/map' element={<AroundPage />} />
           </Routes>
           <Header />
     </div>

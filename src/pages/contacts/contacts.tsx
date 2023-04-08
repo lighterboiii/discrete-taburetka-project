@@ -8,7 +8,7 @@ export const ContactsPage: FC = () => {
       <nav className={st.nav}>
         <a href="#">Артем @artapr</a>
         <a href="#">Слава @lighterboii</a>
-        <a href="#">Дима +79004868862</a>
+        <a href="https://vk.com/borzenkov57" target="_blank">Дима +79004868862</a>
       </nav>
     </>
   )
