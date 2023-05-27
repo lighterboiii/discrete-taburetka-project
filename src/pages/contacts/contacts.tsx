@@ -3,13 +3,19 @@ import st from './contacts.module.css';
 
 export const ContactsPage: FC = () => {
   return (
-    <>
-      <h2>Наши контакты</h2>
+    <section className={st.wrapper}>
+      <h2 className={st.h2}>
+        Просто отправьте нам свою локацию и мы подскажем,
+        <span className={st.span}>где можно вкусно поесть или интересно провести время.</span>
+      </h2>
       <nav className={st.nav}>
-        <a href="#">Артем @artapr</a>
-        <a href="#">Слава @lighterboii</a>
-        <a href="https://vk.com/borzenkov57" target="_blank">Дима +79004868862</a>
+        <h3 className={st.h3}>Наши контакты</h3>
+        <div className={st.linkContainer}>
+          <a className={st.link} href="#">Артем</a>
+          <a className={st.link} href="#">Слава</a>
+          <a className={st.link} href="#">Дима</a>
+        </div>
       </nav>
-    </>
+    </section>
   )
 }

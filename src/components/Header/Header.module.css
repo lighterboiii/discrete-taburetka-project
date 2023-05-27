@@ -23,10 +23,15 @@
 }
 
 .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: black;
   border: 1px black solid;
   text-decoration: none;
   padding: 4px 6px;
+  height: 50px;
+  min-width: 80px;
 }
 
 .link:hover {

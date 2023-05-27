@@ -10,7 +10,7 @@ export const Header: FC = () => {
       <nav className={st.nav}>
         <Link className={st.link} to='/map'>Места вокруг</Link>
         <Link className={st.link} to='/random'>Случайное место</Link>
-        <Link className={st.link} to='/contacts'>Связаться с нами</Link>
+        <Link className={st.link} to='/contacts'>О нас</Link>
       </nav>
     </header>
   );

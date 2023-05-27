@@ -1,6 +1,51 @@
+.wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+}
+
+.h2 {
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+  padding: 0 12px;
+}
+
+.span {
+  color: #4bd0a0;
+}
+
+.link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-weight: 200;
+  color: #19cf8c;
+  font-size: 16px;
+}
+
+.h3 {
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.linkContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
 }
