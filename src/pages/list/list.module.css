@@ -1,0 +1,40 @@
+.list {
+  text-decoration: none;
+  margin: 0 auto 16px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  max-height: 80vh;
+}
+
+.item {
+  margin: 0;
+  border: 1px black solid;
+  max-width: 960px;
+  width: 100%;
+  padding: 12px 24px;
+}
+
+.name {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 20px;
+  color: #4bd0a0;
+}
+
+.button {
+  background-color: #4BD0A0;
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 auto;
+  cursor: pointer;
+}

@@ -1,30 +1,85 @@
-import { FC } from "react";
+import { ChangeEvent, FC, useState, useEffect } from "react";
+import { useMatch, useNavigate } from "react-router-dom";
 import st from './home.module.css';
+import { ListPage } from "../list/list";
+import { orel, belgorod, mtsensk } from "../../utils/data";
+
+type cityData = {
+  id: number; 
+  name: string; 
+  street: string; 
+  type: string; 
+};
 
 export const HomePage: FC = () => {
 
+  const navigate = useNavigate();
+  const [selectedValue, setSelectedValue] = useState('init');
+  const options = [
+    { value: 'init', label: 'Ваш город' },
+    { value: 'Mtsensk', label: 'Мценск' },
+    { value: 'Belgorod', label: 'Белгород' },
+    { value: 'Orel', label: 'Орёл' },
+  ];
+
+  const handleDropdownChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedValue(e.target.value);
+    // setCityData(getDataForSelectedCity());
+  };
+
+  const getDataForSelectedCity = () => {
+    switch (selectedValue) {
+      case 'Mtsensk':
+        return mtsensk;
+      case 'Belgorod':
+        return belgorod;
+      case 'Orel':
+        return orel;
+      default:
+        return [];
+        // return 'Ваш город пока недоступен, но мы работаем над этим :)';
+    }
+  };
+  const [cityData, setCityData] = useState<cityData[]>([]);
+  const handleClick = () => {
+    navigate('/list');
+  };
+  console.log(cityData);
+
+  useEffect(() => {
+    const result = getDataForSelectedCity();
+    setCityData(result);
+  }, [selectedValue]);
+
+  const renderButton = () => {
+    if (selectedValue !== 'init') {
+      return <button className={st.button} onClick={handleClick}>Начать поиск</button>;
+    }
+    return null;
+  };
+
+  const matchList = useMatch('/list');
 
   return (
-    <>
-      <h2 className={st.h2}><span className={st.green}>Здравствуйте,</span> выберите ваше местонахождение</h2>
-      <div className={st.selectContainer}>
-        <select name="country" id="country" className={st.select + ' select'}>
-          <option id='country1' value='check'>Страна</option>
-          <option className="selectLabel" id='2' value='ru'>Россия</option>
-          <option className="selectLabel" id='3' value='ge'>Грузия</option>
-          <option className="selectLabel" id='4' value='an'>Турция</option>
-          <option className="selectLabel" id='5' value='us'>США</option>
-          <option className="selectLabel" id='6' value='jp'>Япония</option>
-        </select>
-        <select name="city" id="city" className={st.select + ' select'}>
-          <option id='city1'>Город</option>
-          <option className="selectLabel" id='city2'>Мценск</option>
-          <option className="selectLabel" id='city3'>Орел</option>
-          <option className="selectLabel" id='city4'>Мать</option>
-          <option className="selectLabel" id='city5'>Вашингтон</option>
-          <option className="selectLabel" id='city6'>Спрингфилд</option>
-        </select>
-      </div>
-    </>
+    <section className={st.wrapper}>
+      {Boolean(matchList) ? <ListPage data={cityData} /> :
+        <>
+          <h2 className={st.h2}>Telegram <span className={st.green}>Adventure</span></h2>
+          <div className={st.selectContainer}>
+            <label htmlFor="dropdown" className={st.h3}>Выберите город:</label>
+            <select name="city" id="city" className={st.select + ' select'} value={selectedValue} onChange={handleDropdownChange}>
+              {options.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))};
+            </select>
+          </div>
+          <div className={st.buttonContainer}>
+            {renderButton()}
+          </div>
+        </>
+      }
+    </section>
   )
-}
+};

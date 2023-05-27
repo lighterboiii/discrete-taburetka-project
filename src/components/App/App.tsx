@@ -13,12 +13,14 @@ export const App: FC = () => {
 
   return (
     <div className={st.App}>
-          <Routes location={background}>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/contacts' element={<ContactsPage />} />
-            <Route path='/map' element={<AroundPage />} />
-          </Routes>
-          <Header />
+      <Routes location={background}>
+        <Route path='/' element={<HomePage />}>
+          <Route path='list' />
+        </Route>
+        <Route path='/contacts' element={<ContactsPage />} />
+        <Route path='/map' element={<AroundPage />} />
+      </Routes>
+      <Header />
     </div>
   );
 }
