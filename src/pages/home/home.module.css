@@ -19,6 +19,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid #4bd0a0;
+  border-radius: 40px;
+  background-color: white;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.option {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  order: 1px solid #4bd0a0;
 }
 
 .selectContainer {
@@ -41,10 +54,15 @@
 }
 
 .buttonContainer {
+  position: absolute;
   margin: 16px auto 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 180px;
 }
 
 .wrapper {

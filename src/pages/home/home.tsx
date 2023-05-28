@@ -69,7 +69,7 @@ export const HomePage: FC = () => {
             <label htmlFor="dropdown" className={st.h3}>Выберите город:</label>
             <select name="city" id="city" className={st.select + ' select'} value={selectedValue} onChange={handleDropdownChange}>
               {options.map((option) => (
-                <option key={option.value} value={option.value}>
+                <option key={option.value} value={option.value} className={st.option}>
                   {option.label}
                 </option>
               ))};
