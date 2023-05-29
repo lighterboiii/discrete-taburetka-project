@@ -27,6 +27,8 @@
 }
 
 .button {
+  margin: 0;
+  width: 106px;
   background-color: #4BD0A0;
   border: none;
   color: white;
@@ -37,4 +39,21 @@
   font-size: 16px;
   margin: 0 auto;
   cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.filter {
+  position: absolute;
+  right: 6px;
+  top: 6px;
 }

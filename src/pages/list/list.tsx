@@ -1,32 +1,39 @@
-import React, { useState, useEffect, FC } from 'react';
+import { useState, useEffect, FC } from 'react';
 import st from "./list.module.css";
 import { useNavigate } from 'react-router-dom';
 
-type Data = {
+interface cityData {
   id: number;
   name: string;
   street: string;
   type: string;
-};
-interface Props {
-  data: any;
 }
 
-export const ListPage: FC<Props> = ({ data }) => {
+interface CustomListProps {
+  data?: cityData[];
+}
+
+export const ListPage: FC<CustomListProps> = ({ data }) => {
   const navigate = useNavigate();
-  const [listData, setListData] = useState<Data[]>([]);
-  console.log(listData)
+  const [listData, setListData] = useState<cityData[]>([]);
+
 
   useEffect(() => {
-    setListData(data);
+    if (data) {
+      setListData(data);
+    }
   }, [data]);
 
   const handleClick = () => {
     navigate(-1);
   };
 
+  const handleFilterClick = () => {
+    navigate('/filter');
+  };
+
   return (
-    <>
+    <div className={st.wrapper}>
       <ul className={st.list}>
         {listData.map((item, index) => (
           <li key={index} className={st.item}>
@@ -36,7 +43,10 @@ export const ListPage: FC<Props> = ({ data }) => {
           </li>
         ))}
       </ul>
-      <button className={st.button} onClick={handleClick}>Назад</button>
-    </>
+      {/* <div className={st.buttons}> */}
+        {/* <button className={st.button} onClick={handleFilterClick}>Фильтр &#9776;</button> */}
+        <button className={st.button} onClick={handleClick}>Назад</button>
+      {/* </div> */}
+    </div>
   );
 };

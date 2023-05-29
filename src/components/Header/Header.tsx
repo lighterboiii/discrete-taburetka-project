@@ -6,10 +6,10 @@ export const Header: FC = () => {
 
   return (
     <header className={st.container}>
-      <Link to='/' className={st.link + ' mainLink'}>На главную</Link>
+      <Link to='/' className={st.link + ' mainLink'}>Главная</Link>
       <nav className={st.nav}>
-        <Link className={st.link} to='/map'>Места вокруг</Link>
-        <Link className={st.link} to='/random'>Случайное место</Link>
+        <Link className={st.link} to='/map'>Карта</Link>
+        <Link className={st.link} to='/main'>Случайное место</Link>
         <Link className={st.link} to='/contacts'>О нас</Link>
       </nav>
     </header>

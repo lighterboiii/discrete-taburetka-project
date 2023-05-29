@@ -1,48 +1,22 @@
-.green {
-  color: #4bd0a0;
-}
-
-.h2 {
-  font-weight: 700;
-  font-size: 28px;
-}
-
-.h3 {
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.select {
-  margin: 0 auto;
-  max-width: 220px;
-  width: 100%;
+.wrapper {
+  margin: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border: 1px solid #4bd0a0;
-  border-radius: 40px;
-  background-color: white;
-  font-size: 12px;
-  font-weight: 500;
-  padding: 4px;
-}
+  height: 80vh;
+  gap: 20px;
+} 
 
-.option {
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  order: 1px solid #4bd0a0;
-}
-
-.selectContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.heading {
+  font-weight: 700;
+  font-size: 22px;
 }
 
 .button {
   background-color: #4BD0A0;
   border: none;
+  border-radius: 40px;
   color: white;
   padding: 7px 16px;
   text-align: center;
@@ -51,25 +25,60 @@
   font-size: 16px;
   margin: 0 auto;
   cursor: pointer;
+  max-width: 185px;
 }
 
-.buttonContainer {
+.container {
   position: absolute;
-  margin: 16px auto 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 180px;
-}
-
-.wrapper {
-  margin: 0;
+  bottom: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  gap: 16px;
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.input {
+  margin: 0 auto;
+  max-width: 270px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #4bd0a0;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.input::placeholder {
+  text-align: center;
 }

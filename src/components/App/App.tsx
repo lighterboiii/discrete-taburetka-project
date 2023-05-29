@@ -5,7 +5,8 @@ import { ContactsPage } from '../../pages/contacts/contacts';
 import { AroundPage } from '../../pages/around/around';
 import { Header } from '../Header/Header';
 import { FC } from 'react';
-import { RandomPage } from '../../pages/random/random';
+import { MainPage } from '../../pages/main/main';
+import { ListPage } from '../../pages/list/list';
 
 export const App: FC = () => {
   const location = useLocation();
@@ -15,12 +16,13 @@ export const App: FC = () => {
   return (
     <div className={st.App}>
       <Routes location={background}>
-        <Route path='/' element={<HomePage />}>
-          <Route path='list' />
-        </Route>
+        <Route path='/' element={<HomePage />} />
+        {/* <Route path='filter' element={<FilterPage />} /> */}
         <Route path='/contacts' element={<ContactsPage />} />
         <Route path='/map' element={<AroundPage />} />
-        <Route path='/random' element={<RandomPage />} />
+        <Route path='/main' element={<MainPage />}>
+          <Route path='list' element={<ListPage />} />
+        </Route>
       </Routes>
       <Header />
     </div>
