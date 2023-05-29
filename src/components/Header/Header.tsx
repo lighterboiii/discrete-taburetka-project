@@ -9,7 +9,7 @@ export const Header: FC = () => {
       <Link to='/' className={st.link + ' mainLink'}>Главная</Link>
       <nav className={st.nav}>
         <Link className={st.link} to='/map'>Карта</Link>
-        <Link className={st.link} to='/main'>Случайное место</Link>
+        <Link className={st.link} to='/main'>Поиск</Link>
         <Link className={st.link} to='/contacts'>О нас</Link>
       </nav>
     </header>
