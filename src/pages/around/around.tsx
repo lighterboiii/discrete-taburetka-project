@@ -8,7 +8,7 @@ export const AroundPage: FC = () => {
       <iframe
         className={st.iframe}
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A579a68533a71ae0c4e357622a6d5125713203935196dddb8a905b9ba40f348f9&amp;source=constructor"
-        width="500"
+        width="100%"
         height="400"
         frameBorder="0"></iframe>
       <ul className={st.ul}>
