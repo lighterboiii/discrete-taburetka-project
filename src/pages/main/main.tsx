@@ -3,13 +3,7 @@ import st from "./main.module.css";
 import { useMatch, useNavigate } from "react-router-dom";
 import { belgorod, mtsensk, orel } from "../../utils/data";
 import { ListPage } from "../list/list";
-
-interface cityData {
-  id: number;
-  name: string;
-  street: string;
-  type: string;
-}
+import { cityData } from "../../utils/types";
 
 export const MainPage = () => {
   const navigate = useNavigate();

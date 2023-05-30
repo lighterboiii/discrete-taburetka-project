@@ -13,7 +13,7 @@
 
 .item {
   margin: 0;
-  border: 1px black solid;
+  /* border: 1px black solid; */
   max-width: 960px;
   width: 100%;
   padding: 12px 24px;
@@ -31,6 +31,7 @@
   width: 106px;
   background-color: #4BD0A0;
   border: none;
+  border-radius: 40px;
   color: white;
   padding: 7px 16px;
   text-align: center;

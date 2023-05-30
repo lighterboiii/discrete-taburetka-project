@@ -1,13 +1,8 @@
 import { useState, useEffect, FC } from 'react';
 import st from "./list.module.css";
 import { useNavigate } from 'react-router-dom';
-
-interface cityData {
-  id: number;
-  name: string;
-  street: string;
-  type: string;
-}
+import { Rest } from '../../components/Rest/Rest';
+import { cityData } from '../../utils/types';
 
 interface CustomListProps {
   data?: cityData[];
@@ -36,11 +31,7 @@ export const ListPage: FC<CustomListProps> = ({ data }) => {
     <div className={st.wrapper}>
       <ul className={st.list}>
         {listData.map((item, index) => (
-          <li key={index} className={st.item}>
-            <p className={st.name}>{item.name}</p>
-            <p>{item.street}</p>
-            <p>{item.type}</p>
-          </li>
+          <Rest index={index} item={item} />
         ))}
       </ul>
       {/* <div className={st.buttons}> */}
