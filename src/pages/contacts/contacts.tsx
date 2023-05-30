@@ -5,7 +5,7 @@ export const ContactsPage: FC = () => {
   return (
     <section className={st.wrapper}>
       <h2 className={st.h2}>
-        Просто отправьте нам свою локацию и мы подскажем,
+        Просто найдите свой город в списке и мы подскажем,
         <span className={st.span}>где можно вкусно поесть или интересно провести время.</span>
       </h2>
       <nav className={st.nav}>
