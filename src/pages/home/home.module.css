@@ -25,7 +25,7 @@
   font-size: 16px;
   margin: 0 auto;
   cursor: pointer;
-  max-width: 185px;
+  min-width: 185px;
 }
 
 .container {
