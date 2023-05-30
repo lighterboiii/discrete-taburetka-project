@@ -21,6 +21,12 @@
   width: 100%;
 }
 
+.h2 {
+  font-weight: 700;
+  font-size: 28px;
+  color: white;
+}
+
 .form {
   width: 100%;
   display: flex;
@@ -39,7 +45,7 @@
 }
 
 .button {
-  background-color: #4BD0A0;
+  background-color: #4E5D94;
   border: none;
   border-radius: 40px;
   color: white;
@@ -52,20 +58,6 @@
   cursor: pointer;
   min-width: 185px;
 }
-
-/* .lowBtn {
-  background-color: white;
-  border: 1px solid #4BD0A0;
-  border-radius: 40px;
-  padding: 7px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 0 auto;
-  cursor: pointer;
-  min-width: 185px;
-} */
 
 .link {
   text-decoration: none;
@@ -82,7 +74,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid #4bd0a0;
+  border: 1px solid white;
   border-radius: 10px;
   background-color: white;
   font-size: 12px;

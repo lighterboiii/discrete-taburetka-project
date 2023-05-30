@@ -37,7 +37,6 @@ export const MainPage = () => {
   const handleClick = () => {
     navigate('/main/list');
   };
-  console.log(cityData);
 
   useEffect(() => {
     const result = getDataForSelectedCity();
@@ -57,7 +56,7 @@ export const MainPage = () => {
   return (
     <section className={st.wrapper}>
       {Boolean(matchList) ? <ListPage data={cityData} /> :
-        Boolean(matchInfo) ? <InfoPage /> :
+        Boolean(matchInfo) ? <InfoPage data={cityData} /> :
         <>
           <h2 className={st.h2}>Telegram <span className={st.green}>Adventure</span></h2>
           <div className={st.selectContainer}>

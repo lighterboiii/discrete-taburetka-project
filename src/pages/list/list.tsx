@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { Rest } from '../../components/Rest/Rest';
 import { cityData } from '../../utils/types';
 
-interface CustomListProps {
+interface IListPage {
   data?: cityData[];
 }
 
-export const ListPage: FC<CustomListProps> = ({ data }) => {
+export const ListPage: FC<IListPage> = ({ data }) => {
   const navigate = useNavigate();
   const [listData, setListData] = useState<cityData[]>([]);
 

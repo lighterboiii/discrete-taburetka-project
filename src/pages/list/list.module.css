@@ -23,13 +23,13 @@
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
   font-size: 20px;
-  color: #4bd0a0;
+  color: #FFF;
 }
 
 .button {
   margin: 0;
   width: 106px;
-  background-color: #4BD0A0;
+  background-color: #4E5D94;
   border: none;
   border-radius: 40px;
   color: white;

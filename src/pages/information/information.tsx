@@ -1,7 +1,13 @@
 import st from "./information.module.css";
 import { useNavigate } from "react-router-dom";
+import { cityData } from "../../utils/types";
+import { FC } from "react";
 
-export const InfoPage = () => {
+interface IInfoPage {
+  data?: cityData[];
+}
+
+export const InfoPage: FC<IInfoPage> = ({ data }) => {
 
   const navigate = useNavigate();
 

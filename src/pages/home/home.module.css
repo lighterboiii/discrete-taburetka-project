@@ -11,10 +11,11 @@
 .heading {
   font-weight: 700;
   font-size: 22px;
+  color: white;
 }
 
 .button {
-  background-color: #4BD0A0;
+  background-color: #4E5D94;
   border: none;
   border-radius: 40px;
   color: white;
@@ -61,6 +62,7 @@
   gap: 6px;
   margin: 0 auto;
   font-size: 16px;
+  color: white;
 }
 
 .input {

@@ -1,11 +1,11 @@
 .text {
-  color: #4BD0A0;
+  color: white;
 }
 
 .button {
   margin: 0;
   width: 106px;
-  background-color: #4BD0A0;
+  background-color: #4E5D94;
   border: none;
   border-radius: 40px;
   color: white;

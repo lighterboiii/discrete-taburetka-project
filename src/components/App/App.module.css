@@ -10,6 +10,7 @@
   padding: 6px;
   box-sizing: border-box;
   position: relative;
+  background-color: #2C2F33;
 }
 
 .App-link {

@@ -15,6 +15,7 @@
   font-size: 16px;
   font-weight: 700;
   text-align: left;
+  color: white;
 }
 
 iframe {
@@ -22,5 +23,5 @@ iframe {
 }
 
 .span {
-  color: #4bd0a0;
+  color: #7289DA;
 }
