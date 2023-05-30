@@ -18,8 +18,8 @@ export const App: FC = () => {
   return (
     <div className={st.App}>
       <Routes location={background}>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/login' element={<LoginPage />} />
+        <Route path='/' element={<LoginPage />} />
+        <Route path='/login' element={<HomePage />} />
         <Route path='/contacts' element={<ContactsPage />} />
         <Route path='/map' element={<AroundPage />} />
         <Route path='/main' element={<MainPage />}>

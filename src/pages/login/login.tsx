@@ -33,7 +33,7 @@ export const LoginPage: FC = () => {
         <button className={st.button}>Войти</button>
       </form>
       <div className={st.container}>
-          <Link to="/" className={st.link}><button className={st.button}>Регистрация</button></Link>
+          <Link to="/login" className={st.link}><button className={st.button}>Регистрация</button></Link>
         {/* <button className={st.lowBtn}>
           <Link to="/forgot-password" className={st.link}>Восстановить пароль</Link>
         </button> */}
