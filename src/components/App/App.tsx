@@ -7,6 +7,7 @@ import { Header } from '../Header/Header';
 import { FC } from 'react';
 import { MainPage } from '../../pages/main/main';
 import { ListPage } from '../../pages/list/list';
+import { LoginPage } from '../../pages/login/login';
 
 export const App: FC = () => {
   const location = useLocation();
@@ -17,7 +18,7 @@ export const App: FC = () => {
     <div className={st.App}>
       <Routes location={background}>
         <Route path='/' element={<HomePage />} />
-        {/* <Route path='filter' element={<FilterPage />} /> */}
+        <Route path='/login' element={<LoginPage />} />
         <Route path='/contacts' element={<ContactsPage />} />
         <Route path='/map' element={<AroundPage />} />
         <Route path='/main' element={<MainPage />}>

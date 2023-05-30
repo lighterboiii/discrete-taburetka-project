@@ -32,7 +32,7 @@ export const HomePage: FC = () => {
           className={st.input}
           name='email'
           value={email}
-          placeholder='E-mail'
+          placeholder='Почта'
           onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
         />
         <input
@@ -42,7 +42,7 @@ export const HomePage: FC = () => {
           placeholder='Пароль'
           onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
         />
-        <button className={st.button} >Зарегистрироваться</button>
+        <button className={st.button}>Регистрация</button>
       </form>
       <div className={st.container}>
         <p className={st.text}>Уже зарегистрированы?</p>
