@@ -10,7 +10,7 @@ interface IRest {
 
 export const Rest: FC<IRest> = ({ index, item }) => {
   return (
-    <Link className={st.link} to='/rest'>
+    <Link className={st.link} to='list/info'>
     <li key={index} >
       <p className={st.name}>{item.name}</p>
       <p>{item.street}</p>

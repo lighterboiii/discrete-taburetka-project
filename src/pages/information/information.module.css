@@ -1,3 +1,19 @@
 .text {
   color: #4BD0A0;
 }
+
+.button {
+  margin: 0;
+  width: 106px;
+  background-color: #4BD0A0;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 auto;
+  cursor: pointer;
+}

@@ -8,7 +8,6 @@ import { FC } from 'react';
 import { MainPage } from '../../pages/main/main';
 import { ListPage } from '../../pages/list/list';
 import { LoginPage } from '../../pages/login/login';
-import { Rest } from '../Rest/Rest';
 import { InfoPage } from '../../pages/information/information';
 
 export const App: FC = () => {
@@ -24,9 +23,9 @@ export const App: FC = () => {
         <Route path='/contacts' element={<ContactsPage />} />
         <Route path='/map' element={<AroundPage />} />
         <Route path='/main' element={<MainPage />}>
-        <Route path='list' element={<ListPage />} />
+          <Route path='list' element={<ListPage />} />
+          <Route path='list/info' element={<InfoPage />} />
         </Route>
-        <Route path='rest' element={<InfoPage />} />
       </Routes>
       <Header />
     </div>

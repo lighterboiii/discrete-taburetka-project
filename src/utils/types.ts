@@ -1,5 +1,5 @@
 export interface cityData {
-  rating: any;
+  rating: number;
   id: number;
   name: string;
   street: string;

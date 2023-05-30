@@ -46,7 +46,7 @@ export const HomePage: FC = () => {
       </form>
       <div className={st.container}>
         <p className={st.text}>Уже зарегистрированы?</p>
-        <button className={st.button}><Link className={st.link} to="/login" >Войти</Link></button>
+        <Link className={st.link} to="/login" ><button className={st.button}>Войти</button></Link>
       </div>
     </div>
   )

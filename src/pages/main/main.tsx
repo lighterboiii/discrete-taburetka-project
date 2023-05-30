@@ -4,6 +4,7 @@ import { useMatch, useNavigate } from "react-router-dom";
 import { belgorod, mtsensk, orel } from "../../utils/data";
 import { ListPage } from "../list/list";
 import { cityData } from "../../utils/types";
+import { InfoPage } from "../information/information";
 
 export const MainPage = () => {
   const navigate = useNavigate();
@@ -51,10 +52,12 @@ export const MainPage = () => {
   };
 
   const matchList = useMatch('/main/list');
+  const matchInfo = useMatch('/main/list/info');
 
   return (
     <section className={st.wrapper}>
       {Boolean(matchList) ? <ListPage data={cityData} /> :
+        Boolean(matchInfo) ? <InfoPage /> :
         <>
           <h2 className={st.h2}>Telegram <span className={st.green}>Adventure</span></h2>
           <div className={st.selectContainer}>

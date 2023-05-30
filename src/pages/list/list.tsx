@@ -23,21 +23,16 @@ export const ListPage: FC<CustomListProps> = ({ data }) => {
     navigate(-1);
   };
 
-  const handleFilterClick = () => {
-    navigate('/filter');
-  };
-
   return (
     <div className={st.wrapper}>
-      <ul className={st.list}>
-        {listData.map((item, index) => (
-          <Rest index={index} item={item} />
-        ))}
-      </ul>
-      {/* <div className={st.buttons}> */}
-        {/* <button className={st.button} onClick={handleFilterClick}>Фильтр &#9776;</button> */}
-        <button className={st.button} onClick={handleClick}>Назад</button>
-      {/* </div> */}
+        <>
+          <ul className={st.list}>
+            {listData.map((item, index) => (
+                <Rest index={index} item={item} />
+            ))}
+          </ul>
+          <button className={st.button} onClick={handleClick}>Назад</button>
+        </>
     </div>
   );
 };
