@@ -1,7 +1,7 @@
 import { ChangeEvent, FC, useEffect, useState } from "react"
 import st from "./main.module.css";
 import { useMatch, useNavigate } from "react-router-dom";
-import { belgorod, mtsensk, orel } from "../../utils/data";
+import { citiesData } from "../../utils/data";
 import { ListPage } from "../list/list";
 import { cityData } from "../../utils/types";
 import { InfoPage } from "../information/information";
@@ -23,14 +23,14 @@ export const MainPage = () => {
   const getDataForSelectedCity = () => {
     switch (selectedValue) {
       case 'Mtsensk':
-        return mtsensk;
+        return citiesData.mtsensk;
       case 'Belgorod':
-        return belgorod;
+        return citiesData.belgorod;
       case 'Orel':
-        return orel;
+        return citiesData.orel;
       default:
         return [];
-        // return 'Ваш город пока недоступен, но мы работаем над этим :)';
+      // return 'Ваш город пока недоступен, но мы работаем над этим :)';
     }
   };
   const [cityData, setCityData] = useState<cityData[]>([]);
@@ -51,28 +51,29 @@ export const MainPage = () => {
   };
 
   const matchList = useMatch('/main/list');
-  const matchInfo = useMatch('/main/list/info');
+  const matchMain = useMatch('/main');
 
   return (
     <section className={st.wrapper}>
-      {Boolean(matchList) ? <ListPage data={cityData} /> :
-        Boolean(matchInfo) ? <InfoPage data={cityData} /> :
-        <>
-          <h2 className={st.h2}>Telegram <span className={st.green}>Adventure</span></h2>
-          <div className={st.selectContainer}>
-            <label htmlFor="dropdown" className={st.h3}>Выберите город:</label>
-            <select name="city" id="city" className={st.select + ' select'} value={selectedValue} onChange={handleDropdownChange}>
-              {options.map((option) => (
-                <option key={option.value} value={option.value} className={st.option}>
-                  {option.label}
-                </option>
-              ))};
-            </select>
-          </div>
-          <div className={st.buttonContainer}>
-            {renderButton()}
-          </div>
-        </>
+      {Boolean(matchList) ? <ListPage data={getDataForSelectedCity()} /> :
+        Boolean(matchMain) ?
+          <>
+            <h2 className={st.h2}>Telegram <span className={st.green}>Adventure</span></h2>
+            <div className={st.selectContainer}>
+              <label htmlFor="dropdown" className={st.h3}>Выберите город:</label>
+              <select name="city" id="city" className={st.select + ' select'} value={selectedValue} onChange={handleDropdownChange}>
+                {options.map((option) => (
+                  <option key={option.value} value={option.value} className={st.option}>
+                    {option.label}
+                  </option>
+                ))};
+              </select>
+            </div>
+            <div className={st.buttonContainer}>
+              {renderButton()}
+            </div>
+          </> :
+          <InfoPage data={cityData} />
       }
     </section>
   )

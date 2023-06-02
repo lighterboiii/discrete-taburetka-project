@@ -5,3 +5,9 @@ export type cityData = {
   street: string;
   type: string;
 };
+
+export interface ICitiesData {
+  belgorod: cityData[],
+  orel: cityData[],
+  mtsensk: cityData[]
+}
