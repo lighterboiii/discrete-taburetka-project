@@ -1,8 +1,8 @@
-import { ChangeEvent, FC, useState, useEffect } from "react";
+import { ChangeEvent, FC, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import st from './home.module.css';
+import st from './register.module.css';
 
-export const HomePage: FC = () => {
+export const RegisterPage: FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

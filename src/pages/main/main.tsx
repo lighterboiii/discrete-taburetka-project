@@ -6,7 +6,7 @@ import { ListPage } from "../list/list";
 import { cityData } from "../../utils/types";
 import { InfoPage } from "../information/information";
 
-export const MainPage = () => {
+export const MainPage: FC = () => {
   const navigate = useNavigate();
   const [selectedValue, setSelectedValue] = useState('init');
   const options = [
@@ -34,9 +34,6 @@ export const MainPage = () => {
     }
   };
   const [cityData, setCityData] = useState<cityData[]>([]);
-  const handleClick = () => {
-    navigate('/main/list');
-  };
 
   useEffect(() => {
     const result = getDataForSelectedCity();
@@ -50,6 +47,10 @@ export const MainPage = () => {
     return null;
   };
 
+  const handleClick = () => {
+    navigate('/main/list');
+  };
+
   const matchList = useMatch('/main/list');
   const matchMain = useMatch('/main');
 
@@ -61,7 +62,7 @@ export const MainPage = () => {
             <h2 className={st.h2}>Telegram <span className={st.green}>Adventure</span></h2>
             <div className={st.selectContainer}>
               <label htmlFor="dropdown" className={st.h3}>Выберите город:</label>
-              <select name="city" id="city" className={st.select + ' select'} value={selectedValue} onChange={handleDropdownChange}>
+              <select name="city" id="city" className={st.select} value={selectedValue} onChange={handleDropdownChange}>
                 {options.map((option) => (
                   <option key={option.value} value={option.value} className={st.option}>
                     {option.label}

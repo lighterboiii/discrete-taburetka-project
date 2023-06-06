@@ -8,14 +8,7 @@ export const ContactsPage: FC = () => {
         Просто найдите свой город в списке и мы подскажем,
         <span className={st.span}>где можно вкусно поесть или интересно провести время.</span>
       </h2>
-      <nav className={st.nav}>
-        <h3 className={st.h3}>Наши контакты</h3>
-        <div className={st.linkContainer}>
-          <a className={st.link} href="#">Артем</a>
-          <a className={st.link} href="#">Слава</a>
-          <a className={st.link} href="#">Дима</a>
-        </div>
-      </nav>
+      <h2 className={st.h3}>Вы можете предложить <span className={st.link}>своё любимое заведение</span></h2>
     </section>
   )
 }

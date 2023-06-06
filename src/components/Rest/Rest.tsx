@@ -8,7 +8,7 @@ interface IRest {
   item: cityData;
 }
 
-export const Rest: FC<IRest> = ({ index, item }) => {
+export const Rest: FC<IRest> = ({ item }) => {
   return (
     <Link className={st.link} to={`/main/list/${item.id}`}>
     <li key={item.id} >
