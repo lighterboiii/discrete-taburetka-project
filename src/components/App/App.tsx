@@ -17,7 +17,7 @@ import { FavPage } from '../../pages/favorite/favorite';
 export const App: FC = () => {
   const location = useLocation();
   const background = location;
-  const isMatchProfile = useMatch('/profile/*');
+  // const isMatchProfile = useMatch('/profile/*');
   // const [data, setData] = useState<ICitiesData>();
 
   // useEffect(() => {
@@ -40,9 +40,9 @@ export const App: FC = () => {
         </Route>
       </Routes>
       <Header
-        one={isMatchProfile ? 'Избранное' : 'Карта'}
-        two={isMatchProfile ? 'Добавить' : 'Поиск'}
-        three={isMatchProfile ? 'Приколы' : 'Информация'} />
+        one={'Карта'}
+        two={'Поиск'}
+        three={'Информация'} />
     </div>
   );
 }
