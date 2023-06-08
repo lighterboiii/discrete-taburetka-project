@@ -30,7 +30,7 @@ export const LoginPage: FC = () => {
           className={st.input}
           placeholder='Пароль'
           onChange={(e) => setPassword(e.target.value)} required></input>
-        <button className={st.button}>Войти</button>
+        <Link to="/profile" className={st.link}><button className={st.button}>Войти</button></Link>
       </form>
       <div className={st.container}>
           <Link to="/register" className={st.link}><button className={st.button}>Регистрация</button></Link>

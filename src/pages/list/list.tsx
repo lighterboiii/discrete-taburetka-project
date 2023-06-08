@@ -18,6 +18,7 @@ export const ListPage: FC<IListPage> = ({ data }) => {
       setListData(data);
     }
   }, [data]);
+  
 console.log(data);
   const handleClick = () => {
     navigate(-1);

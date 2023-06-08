@@ -9,6 +9,7 @@
   align-items: center;
   gap: 2px;
   background-color: #2c2f33;
+  max-width: 986px;
   width: 100%;
   border-top: 0.3px #6b6a6a solid;
   box-sizing: border-box;
