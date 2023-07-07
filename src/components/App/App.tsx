@@ -1,6 +1,6 @@
 import st from './App.module.css';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Link, useMatch } from 'react-router-dom';
 import { RegisterPage } from '../../pages/register/register';
 import { ContactsPage } from '../../pages/contacts/contacts';
 import { AroundPage } from '../../pages/around/around';
@@ -17,9 +17,11 @@ export const App: FC = () => {
   const location = useLocation();
   const background = location;
 
+  const matchLogin = useMatch('/login/*');
+
   return (
     <div className={st.App}>
-      <Link to={'/login'}><button className={st.userButton}></button></Link>
+      <Link to={'/login'}><button className={Boolean(matchLogin) ? `${st.userButtonActive}` : `${st.userButton}`}></button></Link>
       <Routes location={background}>
         <Route path='/' element={<MainPage />}>
           <Route path='list' element={<ListPage />} />
