@@ -11,23 +11,24 @@ export const InfoPage: FC<IInfoPage> = ({ data }) => {
 
   const { id } = useParams();
   const navigate = useNavigate();
-
-  console.log(data);
   const restaurant = data!.find((item: cityData) => item.id === Number(id));
-  console.log(restaurant)
+
   const handleClick = () => {
     navigate(-1);
-  }
+  };
 
-  return ( 
+  return (
     <div className={st.container}>
-    <h3 className={st.name}>{restaurant!.name}</h3>
-    <p className={st.text}>Адрес: {restaurant!.street}</p>
-    <div className={st.textWrapper}>
-      <p className={st.text}>{restaurant!.type}</p>
-      <p className={st.text}>{restaurant!.rating}&#42;</p>
+      <h3 className={st.name}>{restaurant!.name}</h3>
+      <p className={st.text}>Адрес: {restaurant!.street}</p>
+      <div className={st.textWrapper}>
+        <p className={st.text}>{restaurant!.type}</p>
+        <p className={st.text}>{restaurant!.rating}&#42;</p>
+      </div>
+      <div className={st.buttons}>
+        <button className={st.button}>Связаться</button>
+        <button onClick={handleClick} className={st.button}>Назад</button>
+      </div>
     </div>
-    <button onClick={handleClick} className={st.button}>Назад</button>
-  </div>
   )
 };

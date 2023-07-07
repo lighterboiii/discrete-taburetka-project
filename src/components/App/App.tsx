@@ -1,6 +1,6 @@
 import st from './App.module.css';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
 import { RegisterPage } from '../../pages/register/register';
 import { ContactsPage } from '../../pages/contacts/contacts';
 import { AroundPage } from '../../pages/around/around';
@@ -12,21 +12,14 @@ import { InfoPage } from '../../pages/information/information';
 import { ProfilePage } from '../../pages/profile/profile';
 import { FavPage } from '../../pages/favorite/favorite';
 import { LoginPage } from '../../pages/login/login';
-// import { citiesData } from '../../utils/data';
-// import { ICitiesData } from '../../utils/types';
 
 export const App: FC = () => {
   const location = useLocation();
   const background = location;
-  // const isMatchProfile = useMatch('/profile/*');
-  // const [data, setData] = useState<ICitiesData>();
-
-  // useEffect(() => {
-  //   setData(citiesData);
-  // },[]);
 
   return (
     <div className={st.App}>
+      <Link to={'/login'}><button className={st.userButton}></button></Link>
       <Routes location={background}>
         <Route path='/' element={<MainPage />}>
           <Route path='list' element={<ListPage />} />
@@ -47,7 +40,8 @@ export const App: FC = () => {
       <Header
         one={'Карта'}
         two={'Поиск'}
-        three={'Информация'} />
+        three={'Информация'}
+      />
     </div>
   );
 }

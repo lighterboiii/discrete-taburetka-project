@@ -25,3 +25,18 @@
     transform: rotate(360deg);
   }
 }
+
+.userButton {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-image: url('../../images/user.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  border: 1px white solid;
+  border-radius: 40px;
+  background-color: #222122;
+  width: 52px;
+  height: 52px;
+}

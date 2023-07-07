@@ -10,7 +10,7 @@ export const MainPage: FC = () => {
   const navigate = useNavigate();
   const [selectedValue, setSelectedValue] = useState('init');
   const options = [
-    { value: 'init', label: 'Ваш город' },
+    { value: 'init', label: 'Выбрать' },
     { value: 'Mtsensk', label: 'Мценск' },
     { value: 'Belgorod', label: 'Белгород' },
     { value: 'Orel', label: 'Орёл' },

@@ -57,6 +57,7 @@
   margin: 0 auto;
   cursor: pointer;
   min-width: 185px;
+  padding: 8px;
 }
 
 .link {
