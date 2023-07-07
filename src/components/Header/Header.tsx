@@ -15,7 +15,7 @@ export const Header: FC<IHeader> = ({ one, two, three }) => {
       <Link to='/' className={st.link + ' mainLink'}>Главная</Link>
       <nav className={st.nav}>
         <Link className={st.link} to='/map'>{one}</Link>
-        <Link className={st.link} to='/main'>{two}</Link>
+        <Link className={st.link} to='/login'>{two}</Link>
         <Link className={st.link} to='/contacts'>{three}</Link>
       </nav>
     </header>
