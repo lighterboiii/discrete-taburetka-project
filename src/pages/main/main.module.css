@@ -9,36 +9,52 @@
 }
 
 .h3 {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
   font-weight: 700;
   font-size: 20px;
   color: white;
 }
 
-.select {
-  margin: 0 auto;
-  max-width: 220px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid white;
-  border-radius: 40px;
-  background-color: white;
-  font-size: 12px;
-  font-weight: 500;
-  padding: 4px;
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
 
-.option {
+.select {
+  margin: 0 auto;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background-color: white;
-  color: black;
+  max-width: 320px;
+  width: 100%;
+  height: 36px;
+  border-radius: 50px;
+}
+
+.select option:checked {
+  color: #FFF;
+  text-align: center;
   font-size: 16px;
-  order: 1px solid #4bd0a0;
 }
 
 .selectContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
 }
 
@@ -54,6 +70,7 @@
   font-size: 16px;
   margin: 0 auto;
   cursor: pointer;
+  width: 249px;
 }
 
 .buttonContainer {

@@ -38,31 +38,38 @@ export const MainPage: FC = () => {
   useEffect(() => {
     const result = getDataForSelectedCity();
     setCityData(result);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedValue]);
 
   const renderButton = () => {
     if (selectedValue !== 'init') {
-      return <button className={st.button} onClick={handleClick}>Начать поиск</button>;
+      return <button className={st.button} onClick={handleClick}>Продолжить</button>;
     }
     return null;
   };
 
   const handleClick = () => {
-    navigate('/main/list');
+    navigate('/list');
   };
 
-  const matchList = useMatch('/main/list');
-  const matchMain = useMatch('/main');
+  const matchList = useMatch('/list');
+  const matchMain = useMatch('/');
 
   return (
     <section className={st.wrapper}>
       {Boolean(matchList) ? <ListPage data={getDataForSelectedCity()} /> :
         Boolean(matchMain) ?
           <>
-            <h2 className={st.h2}>Telegram <span className={st.green}>Adventure</span></h2>
+            {/* <h2 className={st.h2}>Telegram <span className={st.green}>Adventure</span></h2> */}
             <div className={st.selectContainer}>
-              <label htmlFor="dropdown" className={st.h3}>Выберите город:</label>
-              <select name="city" id="city" className={st.select} value={selectedValue} onChange={handleDropdownChange}>
+              <label htmlFor="dropdown" className={st.h3}>Выберите ваш город</label>
+              <select
+                name="city"
+                id="city"
+                className={st.select}
+                value={selectedValue}
+                onChange={handleDropdownChange}
+              >
                 {options.map((option) => (
                   <option key={option.value} value={option.value} className={st.option}>
                     {option.label}
