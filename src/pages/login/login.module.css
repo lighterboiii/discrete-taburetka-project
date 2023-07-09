@@ -92,12 +92,12 @@
   border-radius: 40px;
   background-color: transparent;
   color: white;
-  padding: 7px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 0 auto;
   cursor: pointer;
-  padding: 6 12px;
+  padding: 6px 12px;
+  min-width: 148px;
 }

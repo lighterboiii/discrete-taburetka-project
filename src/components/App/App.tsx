@@ -18,10 +18,12 @@ export const App: FC = () => {
   const background = location;
 
   const matchLogin = useMatch('/login/*');
+  const matchMap = useMatch('/map/*');
 
   return (
     <div className={st.App}>
-      <Link to={'/login'}><button className={Boolean(matchLogin) ? `${st.userButtonActive}` : `${st.userButton}`}></button></Link>
+      {matchMap ? <></> : <Link to={'/login'}><button className={Boolean(matchLogin) ? `${st.userButtonActive}` : `${st.userButton}`}></button></Link>
+      }
       <Routes location={background}>
         <Route path='/' element={<MainPage />}>
           <Route path='list' element={<ListPage />} />
