@@ -19,7 +19,6 @@ export const ListPage: FC<IListPage> = ({ data }) => {
     }
   }, [data]);
   
-console.log(data);
   const handleClick = () => {
     navigate(-1);
   };
@@ -29,7 +28,7 @@ console.log(data);
         <>
           <ul className={st.list}>
             {listData.map((item: cityData, index: number) => (
-                <Rest index={index} item={item} />
+                <Rest index={index} item={item} key={index} />
             ))}
           </ul>
           <button className={st.button} onClick={handleClick}>Назад</button>

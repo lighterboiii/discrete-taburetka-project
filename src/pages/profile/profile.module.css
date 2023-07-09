@@ -9,7 +9,6 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: flex-end;
   gap: 8px;
   left: 24px;
   top: 80px;
@@ -34,4 +33,25 @@
 .avatar {
   width: 125px;
   height: 125px;
+}
+
+.link {
+  text-decoration: none;
+  color: #FFF;
+  border-bottom: .3px #4E5D94 solid;
+  padding: 6px 12px;
+  max-width: 236px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.menu {
+  margin: 0 auto;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

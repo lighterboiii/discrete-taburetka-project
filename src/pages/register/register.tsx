@@ -46,7 +46,7 @@ export const RegisterPage: FC = () => {
       </form>
       <div className={st.container}>
         <p className={st.text}>Уже зарегистрированы?</p>
-        <Link className={st.link} to="/" ><button className={st.button}>Войти</button></Link>
+        <Link className={st.link} to="/login" ><button className={st.button}>Войти</button></Link>
       </div>
     </div>
   )
