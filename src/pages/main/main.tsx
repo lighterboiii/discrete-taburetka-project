@@ -113,6 +113,7 @@ export const MainPage: FC = () => {
                 value={options.find((option) => option.value === selectedValue)}
                 onChange={handleDropdownChange}
                 styles={customStyles}
+                menuShouldBlockScroll={true}
               />
               {/* <select
                 name="city"
