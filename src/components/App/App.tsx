@@ -10,7 +10,6 @@ import { MainPage } from '../../pages/main/main';
 import { ListPage } from '../../pages/list/list';
 import { InfoPage } from '../../pages/information/information';
 import { ProfilePage } from '../../pages/profile/profile';
-import { FavPage } from '../../pages/favorite/favorite';
 import { LoginPage } from '../../pages/login/login';
 
 export const App: FC = () => {
@@ -33,12 +32,8 @@ export const App: FC = () => {
         <Route path='/contacts' element={<ContactsPage />} />
         <Route path='/map' element={<AroundPage />} />
         <Route path='/login' element={<LoginPage />} />
-        {/* <Route path='/main' element={<MainPage />}>
-          <Route path='list' element={<ListPage />} />
-          <Route path='list/:id' element={<InfoPage />} />
-        </Route> */}
         <Route path='/profile' element={<ProfilePage />}>
-          <Route path='favorite' element={<FavPage />} />
+          {/* <Route path='favorite' element={<FavPage />} /> */}
         </Route>
       </Routes>
       <Header

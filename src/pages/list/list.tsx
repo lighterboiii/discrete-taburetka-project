@@ -18,21 +18,28 @@ export const ListPage: FC<IListPage> = ({ data }) => {
       setListData(data);
     }
   }, [data]);
-  
-  const handleClick = () => {
+
+  const handleBack = () => {
     navigate(-1);
+  };
+
+  const handleClick = () => {
+    navigate('/map');
   };
 
   return (
     <div className={st.wrapper}>
-        <>
-          <ul className={st.list}>
-            {listData.map((item: cityData, index: number) => (
-                <Rest index={index} item={item} key={index} />
-            ))}
-          </ul>
-          <button className={st.button} onClick={handleClick}>Назад</button>
-        </>
+      <>
+        <ul className={st.list}>
+          {listData.map((item: cityData, index: number) => (
+            <Rest index={index} item={item} key={index} />
+          ))}
+        </ul>
+        <div className={st.buttons}>
+          <button className={st.button} onClick={handleBack}>Назад</button>
+          <button className={st.button} onClick={handleClick}>Карта</button>
+        </div>
+      </>
     </div>
   );
 };

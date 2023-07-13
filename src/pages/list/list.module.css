@@ -1,6 +1,6 @@
 .list {
   text-decoration: none;
-  margin: 0 auto 16px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
   display: flex;
@@ -13,7 +13,6 @@
 
 .item {
   margin: 0;
-  /* border: 1px black solid; */
   max-width: 960px;
   width: 100%;
   padding: 12px 24px;
@@ -38,7 +37,6 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 0 auto;
   cursor: pointer;
 }
 
@@ -48,9 +46,11 @@
 }
 
 .buttons {
+  margin: 0;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
 }
 
 .filter {
