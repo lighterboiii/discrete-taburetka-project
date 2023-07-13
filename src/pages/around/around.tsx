@@ -10,7 +10,10 @@ export const AroundPage: FC = () => {
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A579a68533a71ae0c4e357622a6d5125713203935196dddb8a905b9ba40f348f9&amp;source=constructor"
         width="100%"
         height="400"
-        frameBorder="0"></iframe>
+        frameBorder="0"
+        title="Яндекс.Карты"
+      >
+      </iframe>
       <ul className={st.ul}>
         <li className={st.listItem}><span className={st.span}>Исследуйте город</span> в поисках интересующего вас заведения</li>
         <li className={st.listItem}><span className={st.span}>Забронируйте столик</span> или закажите доставку прямо в приложении</li>

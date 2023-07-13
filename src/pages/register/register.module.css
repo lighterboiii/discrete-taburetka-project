@@ -84,3 +84,18 @@
 .input::placeholder {
   text-align: center;
 }
+
+.loginButton {
+  border: 1px solid #4E5D94;
+  border-radius: 40px;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 6px 12px;
+  min-width: 148px;
+}

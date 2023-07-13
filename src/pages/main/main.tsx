@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, useEffect, useState } from "react"
+import { FC, useEffect, useState } from "react"
 import st from "./main.module.css";
 import { useMatch, useNavigate } from "react-router-dom";
 import { citiesData } from "../../utils/data";
@@ -114,6 +114,7 @@ export const MainPage: FC = () => {
                 onChange={handleDropdownChange}
                 styles={customStyles}
                 menuShouldBlockScroll={true}
+                isSearchable={false}
               />
               {/* <select
                 name="city"
